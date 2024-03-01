@@ -1,24 +1,19 @@
 import {BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom'
 import Home from './components/pages/Home';
-import Series from './components/pages/Series';
-import Filmes from './components/pages/Filmes';
-
-import Container from './components/layout/Container';
 import NavBar from './components/layout/NavBar';
 import Footer from './components/layout/Footer';
-
+import Filmes1 from './components/pages/Filmes1'
+import Series1 from './components/pages/Series1'
 
 function App() {
   return (
     <Router>
-      <Container>
+        <NavBar/>
         <Routes>
-          <NavBar/>
           <Route exact path="/" element={<Home/>}/>
-          <Route path="/filmes" element={<Filmes/>}/>
-          <Route path="series" element={<Series/>}/>
+          <Route path="/filmes1" element={<Filmes1/>}/>
+          <Route path="/series1" element={<Series1/>}/>
         </Routes>
-      </Container>
       <Footer/>
     </Router>
   );
