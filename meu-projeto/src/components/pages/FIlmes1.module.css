@@ -1,0 +1,11 @@
+.imagens{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.imagens img{
+    width: 500px;
+    height: 500px;
+    padding: 10px;
+}
