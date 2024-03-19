@@ -5,7 +5,6 @@ import NavBar from './components/layout/NavBar';
 import Footer from './components/layout/Footer';
 import Filmes1 from './components/pages/Filmes1'
 import Series1 from './components/pages/Series1'
-
 function App() {
   return (
     <Router>
