@@ -5,6 +5,7 @@ import NavBar from './components/layout/NavBar';
 import Footer from './components/layout/Footer';
 import Filmes1 from './components/pages/Filmes1'
 import Series1 from './components/pages/Series1'
+import Search from './components/pages/Search';
 function App() {
   return (
     <Router>
@@ -13,6 +14,7 @@ function App() {
           <Route exact path="/" element={<Home/>}/>
           <Route path="/filmes1" element={<Filmes1/>}/>
           <Route path="/series1" element={<Series1/>}/>
+          <Route path="/search" element={<Search/>}/>
         </Routes>
       <Footer/>
     </Router>

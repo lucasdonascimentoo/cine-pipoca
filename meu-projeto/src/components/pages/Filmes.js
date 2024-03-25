@@ -26,8 +26,7 @@ function Filmes(){
         <div className={styles.filmes_series}>
             <Swiper  
             autoplay={{delay: 2500}}
-          modules={[Autoplay]}
-        >
+            modules={[Autoplay]}>
                 
                 {slides.map(slide => (
                     <SwiperSlide>
