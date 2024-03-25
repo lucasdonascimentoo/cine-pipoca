@@ -1,4 +1,6 @@
 import {useState, useEffect} from 'react'
+import {FaStar} from 'react-icons/fa'
+
 function TvShow(){
     const [seriesList, setSeriesList] = useState([])
     const SeriesFavoritos = ()=>{
@@ -23,7 +25,10 @@ function TvShow(){
     return(
         <div>
             {seriesList.map((tvshow)=>(
-                <img  src={`https://image.tmdb.org/t/p/w500${tvshow.poster_path}`}/>
+                <div>
+                    <img  src={`https://image.tmdb.org/t/p/w500${tvshow.poster_path}`}/>
+                    <h1><FaStar/>{`${tvshow.vote_average.toFixed(2)}`}</h1>
+                </div>
             ))}
         </div>
     )

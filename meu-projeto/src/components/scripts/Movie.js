@@ -1,4 +1,5 @@
 import {useState, useEffect} from 'react'
+import {FaStar} from 'react-icons/fa'
 function Movie(){
     const [movieList, setMovieList] = useState([])
     const FilmesFavoritos = ()=>{
@@ -23,7 +24,10 @@ function Movie(){
     return(
         <div>
             {movieList.map((movie)=>(
-                <img  src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}/>
+                <div>
+                    <img  src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}/>
+                    <h1><FaStar/>{`${movie.vote_average.toFixed(2)}`}</h1>
+                </div>
             ))}
         </div>
     )
