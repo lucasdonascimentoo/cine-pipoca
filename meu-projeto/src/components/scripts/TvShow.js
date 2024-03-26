@@ -1,6 +1,6 @@
 import {useState, useEffect} from 'react'
 import {FaStar} from 'react-icons/fa'
-
+import styles from './Movie_TvShow.module.css'
 function TvShow(){
     const [seriesList, setSeriesList] = useState([])
     const SeriesFavoritos = ()=>{
@@ -23,11 +23,12 @@ function TvShow(){
 
     
     return(
-        <div>
+        <div className={styles.movie_tvshow_container}>
             {seriesList.map((tvshow)=>(
                 <div>
                     <img  src={`https://image.tmdb.org/t/p/w500${tvshow.poster_path}`}/>
-                    <h1><FaStar/>{`${tvshow.vote_average.toFixed(2)}`}</h1>
+                    <h2>{`${tvshow.name}`}</h2>
+                    <p><FaStar/>{`${tvshow.vote_average.toFixed(2)}`}</p>
                 </div>
             ))}
         </div>

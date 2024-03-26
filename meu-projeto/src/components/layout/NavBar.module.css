@@ -1,20 +1,33 @@
-.navbar {
+.navbar_container {
+   display: flex;
+    justify-content: space-between;
+}
+
+.navbar_child_logo{
+    float: left;
+}
+
+.navbar_child_search{
     display: flex;
-    
+    float: left;
+    align-items: center;
 }
 
 .link{
-    display: flex;
-    align-items: center;
     color: black;
     text-decoration: none;
-    margin: -40px;
+    padding: 0;
 }
 
+.link_container{
+    display: flex;
+    align-items: center;
+}
 
 .imglogo{
     width: 200px;
     height: 100px;
+    margin-right:-40px;
 }
 
 .formulario{

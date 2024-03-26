@@ -1,0 +1,26 @@
+.movie_tvshow_container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.movie_tvshow_container div{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    margin-bottom: 2.5rem;
+    padding: 1rem;
+}
+
+.movie_tvshow_container img{
+    max-width: 100%;
+}
+
+.movie_tvshow_container img,
+.movie_tvshow_container h2,
+.movie_tvshow_container p{
+    margin-bottom: 1rem;
+}

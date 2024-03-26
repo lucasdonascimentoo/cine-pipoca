@@ -1,5 +1,6 @@
 import {useState, useEffect} from 'react'
 import {FaStar} from 'react-icons/fa'
+import styles from './Movie_TvShow.module.css'
 function Movie(){
     const [movieList, setMovieList] = useState([])
     const FilmesFavoritos = ()=>{
@@ -11,9 +12,9 @@ function Movie(){
             }
           };
             
-            fetch('https://api.themoviedb.org/3/account/21120431/favorite/movies?language=pt-BR&page=1&sort_by=created_at.asc',options)
-            .then(response => response.json())
-            .then(response => setMovieList(response.results))
+        fetch('https://api.themoviedb.org/3/account/21120431/favorite/movies?language=pt-BR&page=1&sort_by=created_at.asc',options)
+        .then(response => response.json())
+        .then(response => setMovieList(response.results))
     }
 
     useEffect(()=>{
@@ -22,11 +23,12 @@ function Movie(){
 
     console.log(movieList)
     return(
-        <div>
+        <div className={styles.movie_tvshow_container}>
             {movieList.map((movie)=>(
                 <div>
-                    <img  src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}/>
-                    <h1><FaStar/>{`${movie.vote_average.toFixed(2)}`}</h1>
+                    <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}/>
+                    <h2>{`${movie.title}`}</h2>
+                    <p><FaStar/>{`${movie.vote_average.toFixed(2)}`}</p>
                 </div>
             ))}
         </div>

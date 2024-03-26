@@ -5,7 +5,7 @@ import styles from  './FIlmes1.module.css'
 function Filmes1(){
     return(
         <section className={styles.imagens}>
-            <Movie/>
+            <div className={styles.row}><Movie/></div>
         </section>
     )
 }
