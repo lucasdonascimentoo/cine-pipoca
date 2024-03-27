@@ -6,6 +6,8 @@ import Footer from './components/layout/Footer';
 import Filmes1 from './components/pages/Filmes1'
 import Series1 from './components/pages/Series1'
 import Search from './components/pages/Search';
+import PageMovie from './components/pages/PageMovie'
+import PageSeries from './components/pages/PageSeries';
 function App() {
   return (
     <Router>
@@ -13,6 +15,8 @@ function App() {
         <Routes>
           <Route exact path="/" element={<Home/>}/>
           <Route path="/filmes1" element={<Filmes1/>}/>
+          <Route path="/movie/:id" element={<PageMovie/>}/>
+          <Route path="/tvshow/:id" element={<PageSeries/>}/>
           <Route path="/series1" element={<Series1/>}/>
           <Route path="/search" element={<Search/>}/>
         </Routes>

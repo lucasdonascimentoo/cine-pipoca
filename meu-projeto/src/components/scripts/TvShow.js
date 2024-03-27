@@ -28,8 +28,8 @@ function TvShow(){
             {seriesList.map((tvshow)=>(
                 <div>
                     <img  src={`https://image.tmdb.org/t/p/w500${tvshow.poster_path}`}/>
-                    <h3>{`${tvshow.name}`}</h3>
-                    <p><FaStar/>{`${tvshow.vote_average.toFixed(2)}`}</p>
+                    <h3>{tvshow.name}</h3>
+                    <p className={styles.paragrafo}><FaStar/>{tvshow.vote_average.toFixed(1)}</p>
                     <Link className={styles.link} to={`/TvShow/${tvshow.id}`}>Detalhes</Link>
                 </div>
             ))}

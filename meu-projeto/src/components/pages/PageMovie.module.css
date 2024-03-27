@@ -1,0 +1,18 @@
+.movie_card{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 3rem;
+        max-width: 1200px;
+        margin: 0 auto;
+}
+
+.movie_card div{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    margin-bottom: 2.5rem;
+    padding: 1rem;
+}
+
