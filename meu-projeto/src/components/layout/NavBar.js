@@ -5,7 +5,7 @@ import {BiSearchAlt2} from 'react-icons/bi'
 function NavBar(){
     return(
         <div className={styles.navbar_container}  >
-            <div className={styles.navbar_child_logo} >
+            <div>
                 <Link className={styles.link} to="/">
                         <div className={styles.link_container}>
                             <img className={styles.imglogo} src={logo} alt="cinepipoca"/>

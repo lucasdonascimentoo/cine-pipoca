@@ -10,6 +10,7 @@
 .movie_tvshow_container div{
     display: flex;
     flex-direction: column;
+    justify-content: center;
     width: 30%;
     margin-bottom: 2.5rem;
     padding: 1rem;
@@ -19,8 +20,29 @@
     max-width: 100%;
 }
 
+.movie_tvshow_container h3{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
 .movie_tvshow_container img,
-.movie_tvshow_container h2,
+.movie_tvshow_container h3,
 .movie_tvshow_container p{
     margin-bottom: 1rem;
+}
+
+.link{
+    display: flex;
+    justify-content: center;
+    background-color: #ce2929;
+    text-decoration: none;
+    color: white;   
+    border: 2px solid #ce2929;
+    border-radius: 4px;
+    font-weight: bold;
+    padding: 1rem 0.5rem;
+    transition: 0.4s;
+}
+
+.link:hover{
+    background-color: red;
 }

@@ -1,6 +1,7 @@
 import {useState, useEffect} from 'react'
 import {FaStar} from 'react-icons/fa'
 import styles from './Movie_TvShow.module.css'
+import {Link} from 'react-router-dom'
 function TvShow(){
     const [seriesList, setSeriesList] = useState([])
     const SeriesFavoritos = ()=>{
@@ -27,8 +28,9 @@ function TvShow(){
             {seriesList.map((tvshow)=>(
                 <div>
                     <img  src={`https://image.tmdb.org/t/p/w500${tvshow.poster_path}`}/>
-                    <h2>{`${tvshow.name}`}</h2>
+                    <h3>{`${tvshow.name}`}</h3>
                     <p><FaStar/>{`${tvshow.vote_average.toFixed(2)}`}</p>
+                    <Link className={styles.link} to={`/TvShow/${tvshow.id}`}>Detalhes</Link>
                 </div>
             ))}
         </div>
