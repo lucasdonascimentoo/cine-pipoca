@@ -25,18 +25,21 @@ function PageSeries(){
 
 console.log(serie)
     return <div>
-        <div className={styles.movie_card}>
-                    <div>
+        <div className={styles.movie_card_container}>
+                    <div className={styles.movie_card}>
                         <img src={`https://image.tmdb.org/t/p/w500${serie.poster_path}`}/>
-                        <h3>{serie.title}</h3>
                         <p>{serie.tagline}</p>
+                        <h3 className={styles.paragrafo}>{serie.title}</h3>
                         <p className={styles.paragrafo}><FaStar/>{serie.vote_average}</p>
                         {/* <p>{`${movie.genres}`}</p> */}
                         
-                        <h3><BsHourglassSplit/> Duração:</h3>
-                        <p>{serie.runtime} minutos</p>
-                        <h3><BsFillFileEarmarkTextFill/> Sinopse:</h3>
-                        <p>{serie.overview}</p>
+                        <h3 className={styles.paragrafo}><BsHourglassSplit/> Duração:</h3>
+                        <p>{serie.number_of_episodes} episódios</p>
+                        <p>{serie.number_of_seasons} temporada(s)</p>
+                        <div>
+                            <h3 className={styles.paragrafo}><BsFillFileEarmarkTextFill/> Sinopse:</h3>
+                            <p className={styles.paragrafo}>{serie.overview}</p>
+                        </div>
 
                     </div>
         </div>

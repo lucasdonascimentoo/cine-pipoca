@@ -1,8 +1,21 @@
-import {Link} from 'react-router-dom'
+import {useState, useEffect} from 'react'
+import {Link, useNavigate} from 'react-router-dom'
 import styles from './NavBar.module.css'
 import logo from '../../img/logo_cinepipoca.png'
 import {BiSearchAlt2} from 'react-icons/bi'
-function NavBar(){
+const NavBar = () =>{
+        const [search, setSearch] = useState("")
+        const navigate = useNavigate()
+
+        const handleSubmit = (e) => {
+            e.preventDefault()
+            
+            if(!search) return
+
+            navigate(`/search?q=${search}`)
+            setSearch("")
+        }
+
     return(
         <div className={styles.navbar_container}  >
             <div>
@@ -14,11 +27,11 @@ function NavBar(){
                 </Link>
             </div>
             <div className={styles.navbar_child_search}>
-                <form>
-                    <input type = "text" placeholder="Busque aqui"/>
-                    <button type="submit">
-                        <BiSearchAlt2/>
-                    </button>
+                <form onSubmit={handleSubmit}>
+                    <input type = "text" placeholder="Busque aqui" onChange={(e)=> setSearch(e.target.value)} value={search}/> 
+                        <button type="submit">
+                            <BiSearchAlt2/>
+                        </button>
                 </form>
             </div>
         </div>

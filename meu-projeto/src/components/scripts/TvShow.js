@@ -25,6 +25,7 @@ function TvShow(){
     
     return(
         <div className={styles.movie_tvshow_container}>
+            {seriesList.length === 0 && <p>Carregando</p>}
             {seriesList.map((tvshow)=>(
                 <div>
                     <img  src={`https://image.tmdb.org/t/p/w500${tvshow.poster_path}`}/>

@@ -16,8 +16,8 @@ function App() {
           <Route exact path="/" element={<Home/>}/>
           <Route path="/filmes1" element={<Filmes1/>}/>
           <Route path="/movie/:id" element={<PageMovie/>}/>
-          <Route path="/tvshow/:id" element={<PageSeries/>}/>
           <Route path="/series1" element={<Series1/>}/>
+          <Route path="/tvshow/:id" element={<PageSeries/>}/>
           <Route path="/search" element={<Search/>}/>
         </Routes>
       <Footer/>

@@ -25,20 +25,23 @@ function PageMovie(){
 
 console.log(movie)
     return <div>
-        <div className={styles.movie_card}>
-                    <div>
-                        <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}/>
-                        <h3>{movie.title}</h3>
-                        <p>{movie.tagline}</p>
-                        <p className={styles.paragrafo}><FaStar/>{movie.vote_average}</p>
-                        {/* <p>{`${movie.genres}`}</p> */}
+        <div className={styles.movie_card_container}>
+            <div className={styles.movie_card}>
+                <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}/>
+                <p>{movie.tagline}</p>
+                <h3 className={styles.paragrafo}>{movie.title}</h3>
+                <p className={styles.paragrafo}><FaStar/>{movie.vote_average}</p>
                         
-                        <h3><BsHourglassSplit/> Duração:</h3>
-                        <p>{movie.runtime} minutos</p>
-                        <h3><BsFillFileEarmarkTextFill/> Sinopse:</h3>
-                        <p>{movie.overview}</p>
-
-                    </div>
+            
+                <h3 className={styles.paragrafo}><BsHourglassSplit/> Duração:</h3>
+                <p>{movie.runtime} minutos</p>
+            
+            
+                <div>
+                    <h3 className={styles.paragrafo}><BsFillFileEarmarkTextFill/> Sinopse:</h3>
+                    <p className={styles.paragrafo}>{movie.overview}</p></div>
+                </div>
+            
         </div>
     </div>
 
