@@ -1,13 +1,13 @@
 import {BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom'
 
-import Home from './components/pages/Home';
-import NavBar from './components/layout/NavBar';
-import Footer from './components/layout/Footer';
-import Filmes1 from './components/pages/Filmes1'
-import Series1 from './components/pages/Series1'
-import Search from './components/pages/Search';
-import PageMovie from './components/pages/PageMovie'
-import PageSeries from './components/pages/PageSeries';
+import Home from './pages/Home';
+import NavBar from './layout/NavBar';
+import Footer from './layout/Footer';
+import Filmes1 from './layout/Filmes1'
+import Series1 from './layout/Series1'
+import Search from './scripts/Search';
+import PageMovie from './pages/PageMovie'
+import PageSeries from './pages/PageSeries';
 function App() {
   return (
     <Router>

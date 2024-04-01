@@ -1,0 +1,36 @@
+.movie_card_container{
+        display: flex;
+        justify-content: center;
+}
+
+.movie_card{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+    margin-bottom: 3rem;
+    padding: 1rem;
+}
+
+.movie_card img,
+.movie_card h3,
+.movie_card p{
+    margin-bottom: 0.5rem;
+}
+
+
+.movie_card svg{
+   
+}
+
+.info{
+    margin-bottom: 1.3rem;
+}
+
+.paragrafo{
+    display: flex;
+    align-items: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+}
