@@ -27,15 +27,19 @@ function Search_Movies(){
         console.log(multi)
         if (multi.length > 0)
           return(
-            <div className={styles.movie_tvshow_container}>
-                <h1>Resultados para: <span>{query}</span></h1>
+            <div>
+                <h1>Resultados para: {query}</h1>
+              <div className={styles.movie_tvshow_container}>
                 {multi.length === 0 && <p>Carregando</p>}
-                {<MovieCard movie={multi[0]} type = {multi[0].media_type}/> }
+                  {multi.map((movie)=>(
+                    <MovieCard movie={movie} type = {movie.media_type}/>
+                  ))}
+              </div>
             </div>
             )
         return (
-            <div>
-                <h1>Nenhum resultado encontrado para: <span>{query}</span></h1>
+            <div className={styles.carregando}>
+                <h1>Nenhum resultado encontrado para: {query}</h1>
             </div>
         )
 

@@ -6,7 +6,7 @@ import styles from '../styles/FilmesSeries.module.css'
 import 'swiper/css'
 import 'swiper/css/pagination'
 import 'swiper/css/autoplay'
-function Series(){
+function SlideSeries(){
     const [series, setSeriesList] = useState([])
     const [error, setError] = useState(null)
     
@@ -64,4 +64,4 @@ function Series(){
         
 }
 
-export default Series
+export default SlideSeries

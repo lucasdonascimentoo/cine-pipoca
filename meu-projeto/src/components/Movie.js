@@ -1,6 +1,6 @@
 import {useState, useEffect} from 'react'
 import MovieCard from './MovieCard'
-import styles from '../styles/Movie_TvShow.module.css'
+import styles from '../styles/MovieCard.module.css'
 function Movie(){
     const [movieList, setMovieList] = useState([])
     const FilmesFavoritos = ()=>{
@@ -26,7 +26,7 @@ function Movie(){
 
     return(
         <div className={styles.movie_tvshow_container}>
-            {movieList.length === 0 && <p>Carregando</p>}
+            {movieList.length === 0 && <p className={styles.carregando}>Carregando...</p>}
             {movieList.map((movie)=>(
                 <MovieCard movie={movie} type={'movie'}/>
             ))}

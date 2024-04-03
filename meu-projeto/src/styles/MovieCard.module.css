@@ -24,6 +24,11 @@
     max-width: 100%;
 }
 
+h1{
+    display: flex;
+    justify-content: center;
+}
+
 .movie_tvshow_container h3 {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
@@ -56,4 +61,8 @@
 
 .link:hover {
     background-color: red;
+}
+
+.carregando{
+    height: 100vh;
 }

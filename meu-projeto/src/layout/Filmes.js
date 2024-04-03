@@ -1,6 +1,6 @@
 import Movie from "../components/Movie"
 
-function Filmes1(){
+function Filmes(){
     return(
         <section>
             <Movie/>
@@ -8,4 +8,4 @@ function Filmes1(){
     )
 }
 
-export default Filmes1
+export default Filmes

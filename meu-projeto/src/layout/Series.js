@@ -1,7 +1,7 @@
 import TvShow from '../components/TvShow'
 
 
-function Series1(){
+function Series(){
     return(
         <section>
             <TvShow/>
@@ -10,4 +10,4 @@ function Series1(){
 
 }
 
-export default Series1
+export default Series

@@ -7,7 +7,7 @@ import 'swiper/css'
 import 'swiper/css/pagination'
 import 'swiper/css/autoplay'
 
-function Filmes(){
+function SlideFilmes(){
     const [movies, setMoviesList] = useState([])
     const [error, setError] = useState(null)
 
@@ -15,8 +15,8 @@ function Filmes(){
         const options = {
             method: 'GET',
             headers: {
-              accept: 'application/json',
-              Authorization: 'Bearer ' + process.env.REACT_APP_TOKEN
+            accept: 'application/json',
+            Authorization: 'Bearer ' + process.env.REACT_APP_TOKEN
         }}
 
 console.log(process.env.REACT_APP_TOKEN)
@@ -65,4 +65,4 @@ console.log(process.env.REACT_APP_TOKEN)
     )
 }
 
-export default Filmes
+export default SlideFilmes

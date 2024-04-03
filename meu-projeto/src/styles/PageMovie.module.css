@@ -19,11 +19,6 @@
     margin-bottom: 0.5rem;
 }
 
-
-.movie_card svg{
-   
-}
-
 .info{
     margin-bottom: 1.3rem;
 }
@@ -33,4 +28,10 @@
     align-items: center;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     text-align: center;
+}
+
+.carregando{
+    display: flex;
+    justify-content: center;
+    height: 100vh;
 }
