@@ -1,4 +1,4 @@
-import {useState, useEffect} from 'react'
+import {useState} from 'react'
 import {Link, useNavigate} from 'react-router-dom'
 import styles from '../styles/NavBar.module.css'
 import logo from '../img/logo_cinepipoca.png'
@@ -22,7 +22,7 @@ const NavBar = () =>{
                 <Link className={styles.link} to="/">
                         <div className={styles.link_container}>
                             <img className={styles.imglogo} src={logo} alt="cinepipoca"/>
-                            <h2>Cine.Pipoca</h2>
+                            <h2>CinePipoca</h2>
                         </div>
                 </Link>
             </div>

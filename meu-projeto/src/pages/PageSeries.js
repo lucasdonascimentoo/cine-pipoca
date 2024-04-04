@@ -1,8 +1,13 @@
 import {useState, useEffect} from 'react'
 import {useParams} from 'react-router-dom'
+import { Link } from "react-router-dom";
 import {FaStar} from 'react-icons/fa'
 import {BsHourglassSplit, BsFillFileEarmarkTextFill} from 'react-icons/bs'
+import { BiSolidCameraMovie } from "react-icons/bi";
+import { RiTvFill } from "react-icons/ri"
 import styles from '../styles/PageMovie.module.css'
+import Loading from '../components/Loading'
+
 function PageSeries(){
     const {id} = useParams()
     const [serie, setSeries] = useState([])
@@ -25,10 +30,15 @@ function PageSeries(){
         }, [])
 
 console.log(serie)
-    return <div>
+    return (
+    <>
+        <div className={styles.link}>
+                        <Link className={styles.icon} to="/filmes"><BiSolidCameraMovie /></Link>
+                        <Link className={styles.icon} to="/series"><RiTvFill /></Link>
+            </div>
         <div className={styles.movie_card_container}>
                     <div className={styles.movie_card}>
-                    {serie.length === 0 && <p className={styles.carregando}>Carregando</p>}
+                    {serie.length === 0 && <p className={styles.carregando}><Loading /></p>}
                         <img src={`https://image.tmdb.org/t/p/w500${serie.poster_path}`}/>
                         {serie.tagline? <p className={styles.paragrafo}><i>“{serie.tagline}”</i></p> : <p></p>}
                         <h3 className={styles.paragrafo}>{serie.name}</h3>
@@ -43,7 +53,7 @@ console.log(serie)
 
                     </div>
         </div>
-    </div>
-
+    </>
+)
 }
 export default PageSeries

@@ -1,7 +1,9 @@
 import {useState, useEffect} from 'react'
 import { useSearchParams, useLocation } from 'react-router-dom'
 import MovieCard from "../components/MovieCard"
+import Loading from '../components/Loading'
 import styles from '../styles/MovieCard.module.css'
+
 
 function Search_Movies(){
     const { search } = useLocation()
@@ -30,7 +32,7 @@ function Search_Movies(){
             <div>
                 <h1>Resultados para: {query}</h1>
               <div className={styles.movie_tvshow_container}>
-                {multi.length === 0 && <p>Carregando</p>}
+                {multi.length === 0 && <p><Loading/></p>}
                   {multi.map((movie)=>(
                     <MovieCard movie={movie} type = {movie.media_type}/>
                   ))}

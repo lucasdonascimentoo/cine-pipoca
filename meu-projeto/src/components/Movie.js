@@ -1,6 +1,7 @@
 import {useState, useEffect} from 'react'
 import MovieCard from './MovieCard'
 import styles from '../styles/MovieCard.module.css'
+import Loading from './Loading'
 function Movie(){
     const [movieList, setMovieList] = useState([])
     const FilmesFavoritos = ()=>{
@@ -13,7 +14,7 @@ function Movie(){
     }
         // process.env.REACT_APP_TOKEN
 
-        fetch('https://api.themoviedb.org/3/account/21120431/favorite/movies?language=pt-BR&page=1&sort_by=created_at.asc',options)
+        fetch('https://api.themoviedb.org/3/movie/top_rated?language=pt-BR&page=1', options)
         .then(response => response.json())
         .then(response => setMovieList(response.results))
     }
@@ -26,7 +27,7 @@ function Movie(){
 
     return(
         <div className={styles.movie_tvshow_container}>
-            {movieList.length === 0 && <p className={styles.carregando}>Carregando...</p>}
+            {movieList.length === 0 && <p className={styles.carregando}><Loading /></p>}
             {movieList.map((movie)=>(
                 <MovieCard movie={movie} type={'movie'}/>
             ))}

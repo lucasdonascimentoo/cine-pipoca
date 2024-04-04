@@ -24,13 +24,9 @@
     max-width: 100%;
 }
 
-h1{
-    display: flex;
-    justify-content: center;
-}
-
 .movie_tvshow_container h3 {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16.5px;
 }
 
 .movie_tvshow_container img,
@@ -59,10 +55,12 @@ h1{
     transition: 0.4s;
 }
 
-.link:hover {
+.linkMovieCard:hover {
     background-color: red;
 }
 
 .carregando{
-    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
 }

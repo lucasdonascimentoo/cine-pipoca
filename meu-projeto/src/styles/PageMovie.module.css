@@ -3,6 +3,12 @@
         justify-content: center;
 }
 
+.carregando{
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+}
+
 .movie_card{
     display: flex;
     justify-content: flex-start;
@@ -30,8 +36,21 @@
     text-align: center;
 }
 
-.carregando{
+.link{
+    display:flex;
+    justify-content: center;
+}
+
+.icon{
     display: flex;
     justify-content: center;
-    height: 100vh;
+    align-items: center;
+    color: black;
+    background-color: white;
+    font-size: 2em;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    margin: 0em 1em 0em 1em;
 }
+

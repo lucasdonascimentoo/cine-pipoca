@@ -1,6 +1,8 @@
 import {Swiper, SwiperSlide} from 'swiper/react'
 import {Autoplay} from 'swiper/modules'
 import {useState, useEffect} from 'react'
+import { RiTvFill } from "react-icons/ri"
+
 
 import styles from '../styles/FilmesSeries.module.css'
 import 'swiper/css'
@@ -19,7 +21,7 @@ function SlideSeries(){
                 }
             };
             
-            fetch('https://api.themoviedb.org/3/account/21120431/favorite/tv?language=pt-BR&page=1&sort_by=created_at.asc', options)
+            fetch('https://api.themoviedb.org/3/tv/top_rated?language=en-US&page=1', options)
             .then(response => {
                 if (!response.ok) {
                     throw new Error(`HTTP error! status: ${response.status}`)
@@ -35,31 +37,37 @@ function SlideSeries(){
     },[])
 
     return(
-        <div className={styles.filmes_series}>
-        <Swiper
-            autoplay={{delay: 2500}}
-            modules={[Autoplay]}>
-                {!error && (
-                    <>
-                    {series.map(slide => (
-                        <SwiperSlide key={slide.id}>
-                            <img src={`https://image.tmdb.org/t/p/w500${slide.poster_path}`} alt={slide.name}/>
-                        </SwiperSlide>
-                    ))}
-                    {!series.length && (
+        <>
+        <div>
+                <h1 className={styles.titulo}><RiTvFill />Séries</h1>
+            </div>
+            <div className={styles.filmes_series}>
+            <Swiper
+                autoplay={{delay: 2500}}
+                modules={[Autoplay]}>
+                    {!error && (
+                        <>
+                        {series.map(slide => (
+                            <SwiperSlide key={slide.id}>
+                                <img src={`https://image.tmdb.org/t/p/w500${slide.poster_path}`} alt={slide.name}/>
+                            </SwiperSlide>
+                        ))}
+                        {!series.length && (
+                            <SwiperSlide>
+                                <div className={styles.empty}>No movies found!</div>
+                            </SwiperSlide>
+                        )}
+                        </>
+                    )}
+                    {error && (
                         <SwiperSlide>
-                            <div className={styles.empty}>No movies found!</div>
+                            <div className={styles.error}>{error}</div>
                         </SwiperSlide>
                     )}
-                    </>
-                )}
-                {error && (
-                    <SwiperSlide>
-                        <div className={styles.error}>{error}</div>
-                    </SwiperSlide>
-                )}
-            </Swiper>
-        </div>
+                </Swiper>
+            </div>
+            
+        </>
     )
         
 }

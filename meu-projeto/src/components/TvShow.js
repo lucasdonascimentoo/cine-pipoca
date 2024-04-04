@@ -1,8 +1,8 @@
 import {useState, useEffect} from 'react'
-import {FaStar} from 'react-icons/fa'
-import {Link} from 'react-router-dom'
 import styles from '../styles/MovieCard.module.css'
 import MovieCard from './MovieCard'
+import Loading from './Loading'
+
 function TvShow(){
     const [seriesList, setSeriesList] = useState([])
     const SeriesFavoritos = ()=>{
@@ -14,7 +14,7 @@ function TvShow(){
             }
         };
         
-        fetch('https://api.themoviedb.org/3/account/21120431/favorite/tv?language=pt-BR&page=1&sort_by=created_at.asc', options)
+            fetch('https://api.themoviedb.org/3/tv/top_rated?language=en-US&page=1', options)
             .then(response => response.json())
             .then(response => setSeriesList(response.results))
     }
@@ -26,7 +26,7 @@ function TvShow(){
     
     return(
         <div className={styles.movie_tvshow_container}>
-            {seriesList.length === 0 && <p className={styles.carregando}>Carregando...</p>}
+            {seriesList.length === 0 && <p className={styles.carregando}><Loading /></p>}
             {seriesList.map((tvshow)=>(
                 <MovieCard movie={tvshow} type={'tv'}/>
             ))}
