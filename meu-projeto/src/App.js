@@ -12,7 +12,7 @@ function App() {
   return (
     <Router>
         <NavBar/>
-        <Routes>
+        <Routes basename={process.env.PUBLIC_URL}>
           <Route exact path="/" element={<Home/>}/>
           <Route path="/filmes" element={<Filmes/>}/>
           <Route path="/movie/:id" element={<PageMovie/>}/>
