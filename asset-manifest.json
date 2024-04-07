@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/cine-pipoca/static/css/main.ae519014.css",
+    "main.js": "/cine-pipoca/static/js/main.44f661ca.js",
+    "static/js/453.d4722a7d.chunk.js": "/cine-pipoca/static/js/453.d4722a7d.chunk.js",
+    "static/media/logo_cinepipoca.png": "/cine-pipoca/static/media/logo_cinepipoca.3dd542fdd7c7e1a4184a.png",
+    "static/media/loading.svg": "/cine-pipoca/static/media/loading.3faf83e50307797d4714c9a5a34f44c2.svg",
+    "index.html": "/cine-pipoca/index.html",
+    "main.ae519014.css.map": "/cine-pipoca/static/css/main.ae519014.css.map",
+    "main.44f661ca.js.map": "/cine-pipoca/static/js/main.44f661ca.js.map",
+    "453.d4722a7d.chunk.js.map": "/cine-pipoca/static/js/453.d4722a7d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ae519014.css",
+    "static/js/main.44f661ca.js"
+  ]
+}
