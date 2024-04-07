@@ -1,7 +1,7 @@
 {
   "name": "meu-projeto",
   "version": "0.1.0",
-  "homepage": "https://lucasdonascimentoo.github.io/",
+  "homepage": "https://lucasdonascimentoo.github.io/cine-pipoca",
   "private": true,
   "dependencies": {
     "@mantine/carousel": "^7.6.1",
