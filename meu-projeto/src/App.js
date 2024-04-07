@@ -10,9 +10,9 @@ import PageMovie from './pages/PageMovie'
 import PageSeries from './pages/PageSeries';
 function App() {
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
         <NavBar/>
-        <Routes basename={process.env.PUBLIC_URL}>
+        <Routes>
           <Route exact path="/" element={<Home/>}/>
           <Route path="/filmes" element={<Filmes/>}/>
           <Route path="/movie/:id" element={<PageMovie/>}/>
