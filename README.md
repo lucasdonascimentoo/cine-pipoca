@@ -2,6 +2,7 @@
 ## Sobre o Projeto
 O CinePipoca é um projeto desenvolvido com o objetivo de aprender e aprimorar habilidades em React e na manipulação de APIs. Através deste site, usuários podem explorar uma vasta coleção de filmes e séries de TV, puxados diretamente de uma API externa. Este projeto foi uma oportunidade para mergulhar nos desafios e soluções envolvidos na construção de aplicações web modernas.
 
+Acesse aqui: https://lucasdonascimentoo.github.io/cine-pipoca
 ![Vídeo sem título ‐ Feito com o Clipchamp (1)](https://github.com/lucasdonascimentoo/cine-pipoca/assets/63742698/fff5e00a-cebc-48f9-b585-a53deeef86c9)
 
 ## Tecnologias Utilizadas
